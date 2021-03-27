@@ -1,0 +1,140 @@
+$very-dark-gray: hsl(0, 0%, 17%);
+$dark-gray: hsl(0, 0%, 59%);
+$white: #fff;
+$black: #000;
+
+h2 {
+  margin: 25px 0;
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  min-height: 100vh;
+
+  header {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-image: url("../images/pattern-bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 1rem 0 5rem 0;
+
+    @media only screen and (max-width: 768px) {
+      padding: 1rem 0 11rem 0;
+
+      .container {
+        width: 100%;
+        margin: 0px 30px;
+        form {
+          max-width: unset;
+        }
+      }
+    }
+
+    h2 {
+      color: $white;
+      font-size: 1.3rem;
+    }
+
+    form {
+      display: flex;
+      max-width: 500px;
+      margin: auto;
+      border-radius: 10px;
+      overflow: hidden;
+
+      &.has-error {
+        box-shadow: 0px 0px 6px 1px red;
+      }
+
+      input {
+        width: 100%;
+        padding: 0.8rem 1rem;
+        color: $dark-gray;
+        border: none;
+      }
+
+      button {
+        width: 50px;
+        flex: none;
+        border: none;
+        background-color: $very-dark-gray;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $dark-gray;
+        }
+      }
+    }
+  }
+
+  .content-wrapper {
+    position: absolute;
+    background-color: $white;
+    border-radius: 10px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    top: 175px;
+    z-index: 1;
+
+    .info-bar-wrapper {
+      display: flex;
+      justify-content: space-between;
+      padding: 1.6rem;
+      text-align: left;
+
+      .info-wrapper {
+        padding: 0 1rem 0 1rem;
+        border-right: 1px solid $very-dark-gray;
+        width: -webkit-fill-available;
+      }
+
+      .info-wrapper:last-child {
+        border-right: unset;
+      }
+
+      span {
+        text-transform: uppercase;
+        color: $dark-gray;
+        font-size: 12px;
+        font-weight: 500;
+      }
+
+      p {
+        font-size: 1.2rem;
+        color: $very-dark-gray;
+        font-weight: 500;
+        margin: 10px 0;
+      }
+    }
+
+    @media only screen and (max-width: 768px) {
+      top: 180px;
+      margin: 0px 30px;
+      .info-bar-wrapper {
+        display: block;
+        text-align: center;
+
+        .info-wrapper {
+          border-right: unset;
+        }
+      }
+    }
+  }
+
+  #mapid {
+    height: 74.4vh;
+    z-index: 0;
+
+    
+    @media only screen and (max-width: 768px) {
+      height: 100vh;
+    }
+  }
+}

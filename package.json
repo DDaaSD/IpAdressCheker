@@ -1,0 +1,16 @@
+{
+  "name": "interviewtask",
+  "version": "1.0.0",
+  "description": "npm i",
+  "main": "index.js",
+  "type": "module",
+  "dependencies": {
+    "mapbox-gl": "^2.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
